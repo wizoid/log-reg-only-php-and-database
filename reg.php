@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,18 +19,25 @@
         <input type="password" name="password" placeholder="Придумайте пароль">
 
         <label for="">Confirmation Password</label>
-        <input type="text" name="confirm_password" placeholder="Подтвердите пароль">
+        <input type="password" name="confirm_password" placeholder="Подтвердите пароль">
 
         <label for="">Mail</label>
         <input type="email" name="email" placeholder="Input email">
 
-        <button>Войти</button>
+        <button>Зарегистрироваться</button>
 
         <p>
         you have an account - <a href="index.php">entrance</a>
         </p>
 
+        <?php
+            if ($_SESSION['message']){
+                echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
+            }
+                unset($_SESSION['message']);
+        ?>
 
-    </form>
+</form>
+
 </body>
 </html>

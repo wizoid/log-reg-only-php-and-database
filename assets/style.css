@@ -29,6 +29,13 @@ button{
     cursor: pointer;
     border: unset;
 }
+.msg{
+    border: 2px solid #a03030;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
 a{
     color: blueviolet;
 }
